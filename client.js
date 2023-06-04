@@ -11,15 +11,24 @@ const connect = function () {
   // next, interpret incoming data as text
   conn.setEncoding("utf8");
 
+  //conn.on("data", (data) => {
+  //  console.log("Received data ", data);
+  //});
+
+
+  //use the .on method on our conn object to register a "connect" handler (a callback function). In the callback, print a message
+  conn.on("connect", () => {
+    console.log("Connected to game server");
+    conn.write("Name: ABC"); //Send the string "Name: ___" to the server, upon connection
+
+  })
   conn.on("data", (data) => {
-    console.log("Received data ", data);
+    console.log("Received data: ", data);
   });
 
   console.log("Connecting ...");
 
   return conn;
 };
-
-
 
 module.exports = {connect}
