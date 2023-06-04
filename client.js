@@ -20,8 +20,19 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Connected to game server");
     conn.write("Name: ABC"); //Send the string "Name: ___" to the server, upon connection
+    setTimeout(() => {
+    conn.write("Move: up");
+    }, 2000); 
+    setTimeout(() => {
+    conn.write("Move: down");
+    }, 1000);
+    setTimeout(() => {    
+      
+    conn.write("Move: left");
+    conn.write("Move: right");
+    }, 3000);
 
-  })
+  });
   conn.on("data", (data) => {
     console.log("Received data: ", data);
   });
