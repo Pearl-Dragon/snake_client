@@ -2,7 +2,7 @@ const net = require("net")
 
 const connect = () => {
   const conn = net.createConnection({
-    host: 'localhost',// IP address here,
+    host: '192.168.1.13',// IP address here,
     port: 50541,// PORT number here,
   });
 
@@ -10,19 +10,19 @@ const connect = () => {
   conn.setEncoding("utf8");
 
   // Handle incoming data
-  conn.on("data", (data) => {
-    console.log("Received data:", data);
-    // You can perform any additional processing or actions with the data here
-  });
-// Handle successful connection
-conn.on('connect', () => {
-  console.log('Successfully connected to game server');
-  // Send the name message
-  conn.write('Name: XYZ'); // Replace XYZ with your initials
-});
+//   // conn.on("data", (data) => {
+//     console.log("Received data:", data);
+//     // You can perform any additional processing or actions with the data here
+//   });
+// // Handle successful connection
+// conn.on('connect', () => {
+//   console.log('Successfully connected to game server');
+//   // Send the name message
+//   conn.write('Name: PAL'); // Replace XYZ with your initials
+// });
   return conn;
 };
 
-console.log("Connecting ...");
+//console.log("Connecting ...");
 
 module.exports = connect;
