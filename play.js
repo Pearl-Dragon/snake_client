@@ -2,15 +2,43 @@
 const net = require("net");
 const connect = require("./client")
 
+// setup interface to handle user input from stdin
+const setupInput = function () {
+  const stdin = process.stdin; //the stdin object returned by setupInput will allow us to listen for keyboard input and react to it.
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
+
+  stdin.on("data", handleUserInput);
+  return stdin;
+};
+
+const handleUserInput = function (data) {
+  // Handle user input logic here
+  // Example: exit the program when "ctrl + c" is pressed
+  if (data === '\u0003') {
+    process.exit();
+  }
+};
+
   // interpret incoming data as text
   //console.log (connect())
-  const conn = connect();
-conn.on("data", (data) => {
+ // const conn = connect(); // 16,17,19,25 being switched around.This version 1
+//conn.on("data", (data) => {
   
-  console.log("Recieved data:", data);
-});
+  //console.log("Recieved data:", data);
+//});
 
   //return conn;
 
 
-console.log("Connecting ...");
+//console.log("Connecting ...");
+console.log("Connecting ..."); // 26,27,29,30,33 Version 2
+const conn = connect(); //removed due to error msg: connect is not an Fn
+
+conn.on("data", (data) => {  // error msg:conn not defined
+  
+  console.log("Received data:", data);
+});
+
+setupInput();

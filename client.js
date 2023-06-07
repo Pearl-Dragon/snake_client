@@ -39,10 +39,11 @@ conn.on('connect', () => {
 //   conn.write(`Move: ${currentMovement}`);
 //   index++;
 // }, 50);
-// });
+ });
 
   return conn;
 };
-connect();
+//connect(); 
 //console.log("Connecting ...");
-module.exports = connect;  
+// 
+module.exports = connect
