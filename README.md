@@ -9,15 +9,7 @@ cd snek-multiplayer).
 
 ## Final Product
 
-![Snek Game GIF](https://github.com/Pearl-Dragon/snake_client/blob/main/snek.gif)
-
-
-
-
-
-
-
-# 🐍 Snek.js [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![snekjs on NPM](https://img.shields.io/npm/v/snekjs.svg?color=green&label=snekjs)](https://www.npmjs.com/package/snekjs)
+🐍 Snek.js
 
 A terminal-based Snake implementation written in JavaScript (Node.js).
 
@@ -29,25 +21,13 @@ To play the game, one needs to implement a game client. An example solution code
 
 ## Installation
 
-npm install
-npm run play
-
-### Clone from repository
-
-```bash
 git clone https://github.com/lighthouse-labs/snek-multiplayer.git
 cd snek-multiplayer
 
-## Acknowledgements
+# Install and run via npm
 
-This project was not built from scratch. It was inspired and started from [snek](https://github.com/taniarascia/snek) ([blog post](https://www.taniarascia.com/snake-game-in-javascript/)). [Tania Rascia](https://www.taniarascia.com) is the original author.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-!["screenshot description"](#)
-!["screenshot description"](#)
+npm install
+npm run play
 
 
 ## Getting Started
@@ -56,6 +36,11 @@ This project is open source and available under the [MIT License](LICENSE).
 - Run the development snake client using the `node play.js` command.
 
 To play the game, one needs to implement a game client. An example solution code for the client is found at https://github.com/Pearl-Dragon/snake_client - it's a private repository.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
 
 ## Acknowledgements
 
