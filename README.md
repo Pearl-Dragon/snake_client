@@ -17,7 +17,8 @@ A terminal-based Snake implementation written in JavaScript (Node.js).
 
 ## Instructions
 
-To play the game, one needs to implement a game client. An example solution code for the client can be [found here](https://github.com/lighthouse-labs/snek-client) (it's a private repository, not accessible to everyone).
+To play the game, one needs to implement a game client. An example solution code for the client is found at https://github.com/Pearl-Dragon/snake_client - it's a private repository.
+
 
 ## Installation
 
@@ -27,6 +28,7 @@ cd snek-multiplayer
 # Install and run via npm
 
 npm install
+
 npm run play
 
 
@@ -35,7 +37,6 @@ npm run play
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
 
-To play the game, one needs to implement a game client. An example solution code for the client is found at https://github.com/Pearl-Dragon/snake_client - it's a private repository.
 
 ## License
 
