@@ -17,14 +17,14 @@ const setupInput = function (conn) {
       conn.write("Move: down");
     } else if (key === "d") {
       conn.write("Move: right");
-    } else if (key === "\u0003") {
+    //} else if (key === "\u0003") {
       // Check for Ctrl + C input (ASCII value \u0003) to terminate the game
-    // } else if (key === 1) {  
-    //   conn.write("Say: Hello PAL!");
-    // } else if (key === "2") {
-    //   conn.write("Say: Good game!");
-    //   else if (key === "\u0003") {
-    //     // Check for Ctrl + C input (ASCII value \u0003) to terminate the game
+    } else if (key === 1) {  
+      conn.write("Say: Hello PAL!");
+    } else if (key === "2") {
+      conn.write("Say: Good game!");
+    } else if (key === "\u0003") {
+      // Check for Ctrl + C input needs to be at the end of the block in order to work
       process.exit();
     }
   };

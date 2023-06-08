@@ -1,5 +1,5 @@
 // this resembles the server.js from the lecture
-const net = require("net");
+//const net = require("net");
 const connect = require("./client")
 const setupInput = require("./input")
 
@@ -37,16 +37,16 @@ const setupInput = require("./input")
 console.log("Connecting ..."); // 26,27,29,30,33 Version 2
 const conn = connect(); 
 //connect(); 
-conn.on("connect", () => {
-  console.log("Successfully connected to game server");
-  setupInput(conn);
+// conn.on("connect", () => {
+//   console.log("Successfully connected to game server");
+setupInput(conn);
 
-  setInterval(() => {
-    conn.write("heartbeat");
-  }, 1000); // to keep the connection active
-});
- conn.on("data", (data) => {  // error msg:conn not defined
-  console.log("Received data:", data);
- });
+//   setInterval(() => {
+//     conn.write("heartbeat");
+//   }, 1000); // to keep the connection active
+// });
+//  conn.on("data", (data) => {  // error msg:conn not defined
+//   console.log("Received data:", data);
+//  });
 
 //setupInput(conn);
