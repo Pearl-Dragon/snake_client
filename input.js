@@ -1,7 +1,7 @@
 let connection;
 const setupInput = function (conn) {
   connection = conn;
- 
+
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -17,9 +17,7 @@ const setupInput = function (conn) {
       conn.write("Move: down");
     } else if (key === "d") {
       conn.write("Move: right");
-    //} else if (key === "\u0003") {
-      // Check for Ctrl + C input (ASCII value \u0003) to terminate the game
-    } else if (key === 1) {  
+    } else if (key === 1) {
       conn.write("Say: Hello PAL!");
     } else if (key === "2") {
       conn.write("Say: Good game!");
@@ -28,9 +26,9 @@ const setupInput = function (conn) {
       process.exit();
     }
   };
-stdin.on("data", handleUserInput);
+  stdin.on("data", handleUserInput);
 
-return stdin;
+  return stdin;
 };
 
-  module.exports = setupInput; 
+module.exports = setupInput;

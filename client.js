@@ -11,13 +11,11 @@ const connect = () => {
   conn.setEncoding("utf8");
 
   // Handle incoming data
-
   conn.on("data", (data) => {
     console.log("Received data:", data);
-    //     // You can perform any additional processing or actions with the data here
   });
 
-  // // Handle successful connection
+  // Handle successful connection
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     // Send the name message
@@ -44,7 +42,5 @@ const connect = () => {
 
   return conn;
 };
-//connect();
-//console.log("Connecting ...");
-//
+
 module.exports = connect;
